@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { HashRouter as Router, Route } from 'react-router-dom';
-import MovieSearchContainer from './containers/MovieSearchContainer';
-import MovieDetailContainer from './containers/MovieDetailContainer';
+import MovieSearchContainer from './containers/MovieSearchContainer/MovieSearchContainer';
+import MovieDetailContainer from './containers/MovieDetailContainer/MovieDetailContainer';
 
-class App extends React.Component {
+export default class App extends React.Component {
   render() {
     return (
       <Router>
@@ -15,5 +15,3 @@ class App extends React.Component {
     )
   }
 }
-
-export default App;
