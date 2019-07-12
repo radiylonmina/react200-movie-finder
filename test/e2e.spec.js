@@ -32,11 +32,12 @@ describe('express', () => {
       .then((text) => {
         expect(text).to.equal("Rad's Movie Finder");
       })
-  ).timeout(10000);
+      .done()
+  ).timeout(20000);
 
   it('returns the correct status code', () => axios.get(search)
     .then(response => expect(response.status === 200))
-  ).timeout(10000);
+  ).timeout(20000);
 
   it('should have search input', () => 
     nightmare
@@ -46,7 +47,8 @@ describe('express', () => {
       .then((text) => {
         expect(text).to.contain('input');
       })
-  ).timeout(10000);
+      .done()
+  ).timeout(20000);
 
   it('should have go button', () => 
     nightmare
@@ -55,8 +57,9 @@ describe('express', () => {
       .end()
       .then((text) => {
         expect(text).to.contain('button');
-    })
-  ).timeout(10000);
+      })
+      .done()
+  ).timeout(20000);
 
   it('should have Link to return to search container', () => 
     nightmare
@@ -66,7 +69,8 @@ describe('express', () => {
       .then((text) => {
         expect(text).to.contain('Return to Search');
     })
-  ).timeout(10000);
+      .done()
+  ).timeout(20000);
 
   it('should have movie poster image', () => 
     nightmare
@@ -76,7 +80,8 @@ describe('express', () => {
       .then((text) => {
         expect(text).to.contain('img');
       })
-  ).timeout(10000);
+      .done()
+  ).timeout(20000);
 
   it('should have correct movie synopsis', () => 
     nightmare
@@ -86,7 +91,8 @@ describe('express', () => {
       .then((text) => {
         expect(text).to.contain('Synopsis');
     })
-  ).timeout(10000);
+      .done()
+  ).timeout(20000);
 
   it('should have correct movie rating', () => 
     nightmare
@@ -96,7 +102,8 @@ describe('express', () => {
       .then((text) => {
         expect(text).to.contain('Rated');
     })
-  ).timeout(10000);
+      .done()
+  ).timeout(20000);
   
   it('should have correct movie release date', () => 
     nightmare
@@ -105,7 +112,8 @@ describe('express', () => {
       .end()
       .then((text) => {
         expect(text).to.contain('Release Date');
-    })
-  ).timeout(10000);
+      })
+      .done()
+  ).timeout(20000);
 
 });
