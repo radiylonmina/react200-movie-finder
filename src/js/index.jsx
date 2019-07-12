@@ -1,17 +1,19 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware, compose } from 'redux';
+import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import promise from 'redux-promise-middleware';
+import searchReducer from './containers/MovieSearchContainer/searchReducer';
 import App from './app';
-// import reducers from './reducers'; --> will be reducer from search
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-// update to include search reducer createStore(searchReducer, composeEnhancers...)
-const store = createStore(composeEnhancers(applyMiddleware(promise)));
+const rootReducer = combineReducers({
+  movieData: searchReducer
+});
 
-/* Update render method invoke */
+const store = createStore(rootReducer, composeEnhancers(applyMiddleware(promise)));
+
 render(
   <Provider store={ store }>
     <App />
