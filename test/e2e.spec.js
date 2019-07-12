@@ -32,7 +32,6 @@ describe('express', () => {
       .then((text) => {
         expect(text).to.equal("Rad's Movie Finder");
       })
-      .done()
   ).timeout(20000);
 
   it('returns the correct status code', () => axios.get(search)
@@ -47,7 +46,6 @@ describe('express', () => {
       .then((text) => {
         expect(text).to.contain('input');
       })
-      .done()
   ).timeout(20000);
 
   it('should have go button', () => 
@@ -58,7 +56,6 @@ describe('express', () => {
       .then((text) => {
         expect(text).to.contain('button');
       })
-      .done()
   ).timeout(20000);
 
   it('should have Link to return to search container', () => 
@@ -69,7 +66,6 @@ describe('express', () => {
       .then((text) => {
         expect(text).to.contain('Return to Search');
     })
-      .done()
   ).timeout(20000);
 
   it('should have movie poster image', () => 
@@ -80,7 +76,6 @@ describe('express', () => {
       .then((text) => {
         expect(text).to.contain('img');
       })
-      .done()
   ).timeout(20000);
 
   it('should have correct movie synopsis', () => 
@@ -91,7 +86,6 @@ describe('express', () => {
       .then((text) => {
         expect(text).to.contain('Synopsis');
     })
-      .done()
   ).timeout(20000);
 
   it('should have correct movie rating', () => 
@@ -102,7 +96,6 @@ describe('express', () => {
       .then((text) => {
         expect(text).to.contain('Rated');
     })
-      .done()
   ).timeout(20000);
   
   it('should have correct movie release date', () => 
@@ -113,7 +106,6 @@ describe('express', () => {
       .then((text) => {
         expect(text).to.contain('Release Date');
       })
-      .done()
   ).timeout(20000);
 
 });
