@@ -36,7 +36,7 @@ describe('express', () => {
 
   it('returns the correct status code', () => axios.get(search)
     .then(response => expect(response.status === 200))
-  ).timeout(10000;
+  ).timeout(10000);
 
   it('should have search input', () => 
     nightmare
@@ -86,7 +86,7 @@ describe('express', () => {
       .then((text) => {
         expect(text).to.contain('Synopsis');
     })
-  ).timeout(10000;
+  ).timeout(10000);
 
   it('should have correct movie rating', () => 
     nightmare
