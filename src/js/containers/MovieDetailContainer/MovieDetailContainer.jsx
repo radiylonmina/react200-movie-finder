@@ -23,10 +23,10 @@ export default class MovieDetailContainer extends Component {
             <h4 className='text-center font-weight-bold'>Welcome to the new Blockbuster.</h4>
           </div>
 
-          <Link to='/' className='btn btn-success mb-4'>Return to Search</Link>
+          <Link to='/' className='btn btn-success mb-4' id='link'>Return to Search</Link>
 
           <div className='card border-0 mb-5'>
-            <h1 className='card-header text-white bg-danger font-weight-bold font-italic'>{`${movieInfo.Title} (${movieInfo.Year})`}</h1>
+            <h1 className='card-header text-white bg-danger font-weight-bold font-italic' id='movie-title'>{`${movieInfo.Title} (${movieInfo.Year})`}</h1>
             <div className='card-body'>
               <div className='card-block'>
                 <div className='row'>
@@ -49,46 +49,46 @@ export default class MovieDetailContainer extends Component {
                       <tbody>
                         {/* plot */}
                         <tr>
-                          <th className='border-top-0' style={{ fontSize: '20px' }} scope='row'>Synopsis</th>
+                          <th className='border-top-0' style={{ fontSize: '20px' }} id='plot' scope='row'>Synopsis</th>
                           <td className='border-top-0 align-middle' style={{ fontSize: '20px' }}>{ movieInfo.Plot }</td>
                         </tr>
                         {/* rated */}
                         <tr>
-                          <th className='border-top-0' style={{ fontSize: '20px' }} scope='row'>Rated</th>
+                          <th className='border-top-0' style={{ fontSize: '20px' }} id='rated' scope='row'>Rated</th>
                           <td className='border-top-0 align-middle'>
                             <span className='badge badge-danger font-weight-bold' style={{ fontSize: '23px' }}>{ movieInfo.Rated }</span>
                           </td>
                         </tr>
                         {/* release date */}
                         <tr>
-                          <th className='border-top-0' style={{ fontSize: '20px' }} scope='row'>Release Date</th>
+                          <th className='border-top-0' style={{ fontSize: '20px' }} id='date' scope='row'>Release Date</th>
                           <td className='border-top-0 align-middle' style={{ fontSize: '20px' }}>{ movieInfo.Released }</td>
                         </tr>
                         {/* actors/cast */}
                         <tr>
-                          <th className='border-top-0' style={{ fontSize: '20px' }} scope='row'>Cast</th>
+                          <th className='border-top-0' style={{ fontSize: '20px' }} id='cast' scope='row'>Cast</th>
                           <td className='border-top-0 align-middle' style={{ fontSize: '20px' }}>{ movieInfo.Actors }</td>
                         </tr>
                         {/* director */}
                         <tr>
-                          <th className='border-top-0' style={{ fontSize: '20px' }} scope='row'>Directed By</th>
+                          <th className='border-top-0' style={{ fontSize: '20px' }} id='director' scope='row'>Directed By</th>
                           <td className='border-top-0 align-middle' style={{ fontSize: '20px' }}>{ movieInfo.Director }</td>
                         </tr>
                         {/* language */}
                         <tr>
-                          <th className='border-top-0' style={{ fontSize: '20px' }} scope='row'>Language</th>
+                          <th className='border-top-0' style={{ fontSize: '20px' }} id='language' scope='row'>Language</th>
                           <td className='border-top-0 align-middle' style={{ fontSize: '20px' }}>{ movieInfo.Language }</td>
                         </tr>
                         {/* metascore */}
                         <tr>
-                          <th className='border-top-0' style={{ fontSize: '20px' }} scope='row'>Metascore</th>
+                          <th className='border-top-0' style={{ fontSize: '20px' }} id='metascore' scope='row'>Metascore</th>
                           <td className='border-top-0 align-middle' style={{ fontSize: '20px' }}>
                             <span className='badge badge-dark font-weight-bold' style={{ fontSize: '23px' }}>{ movieInfo.Metascore } / 100</span>
                           </td>
                         </tr>
                         {/* imdb rating */}
                         <tr>
-                          <th className='border-top-0' style={{ fontSize: '20px' }} scope='row'>IMDB Rating</th>
+                          <th className='border-top-0' style={{ fontSize: '20px' }} id='imdbRating' scope='row'>IMDB Rating</th>
                           <td className='border-top-0 align-middle' style={{ fontSize: '20px' }}>
                             <span className='badge badge-dark font-weight-bold' style={{ fontSize: '23px' }}>{ movieInfo.imdbRating } / 10</span>
                           </td>

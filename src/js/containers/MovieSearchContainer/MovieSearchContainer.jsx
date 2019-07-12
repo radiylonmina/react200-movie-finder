@@ -28,7 +28,7 @@ export default class MovieSearchContainer extends Component {
       <div className='content'>
         <div className='container mb-5'>
           <div className='jumbotron bg-danger text-white text-center'>
-            <h1 className='display-2 text-center font-weight-bold'>Rad's Movie Finder</h1>
+            <h1 className='display-2 text-center font-weight-bold' id='app'>Rad's Movie Finder</h1>
             <h3 className='text-center font-weight-bold font-italic'>A new kind of Blockbuster.</h3>
           </div>
 
@@ -54,7 +54,7 @@ export default class MovieSearchContainer extends Component {
                           </div>
                           {/* more information button */}
                           <div className='text-center mb-3'>
-                            <Link to={ `/movie/${movie.imdbID}` } className='btn btn-primary'>Movie Information</Link>
+                            <Link to={ `/movie/${movie.imdbID}` } className='btn btn-primary' id='link'>Movie Information</Link>
                           </div>
                         </div>
                     )})
