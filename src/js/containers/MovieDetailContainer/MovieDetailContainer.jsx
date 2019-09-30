@@ -20,7 +20,7 @@ export default class MovieDetailContainer extends Component {
         <div className='container'>
           <div className='jumbotron bg-danger text-white text-center'>
             <h1 className='display-2 text-center font-weight-bold'>Rad's Movie Finder</h1>
-            <h3 className='text-center font-weight-bold font-weight-italic'>A new kind of Blockbuster.</h3>
+            <h3 className='text-center font-weight-bold font-italic'>A new kind of Blockbuster.</h3>
           </div>
 
           <Link to='/' className='btn btn-success mb-4' id='link'>Return to Search</Link>
